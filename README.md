@@ -4,9 +4,10 @@
 
 	pip install -r requirements.txt
 
-The configurations for nasnet and inception_v1 are already in `config.py` and others can be added.
 The net tars have to be downloaded from [here](https://www.tensorflow.org/lite/guide/hosted_models) and
 placed in the `models` folder.
+The configurations for `nasnet` and `inception_v1` are already in `config.py`, any other nets need to
+be configured appropriately.
 
 ## Usage
 
