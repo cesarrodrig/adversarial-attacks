@@ -76,6 +76,7 @@ def predict(model, images):
     """
     probs = model(images)
     labels = np.argmax(probs, axis=1)
+    probs = np.max(probs, axis=1)
     labels = [ model.label_to_label_name(label) for label in labels ]
     return labels, probs
 
@@ -140,7 +141,7 @@ def run_command(net_name, image_name, image_url, steps):
         model = Model(**net_config)
         fgsm = FGSM(model)
         adv_img = perform_attack(model, fgsm, image, steps)
-        labels, probs = predict([image, adv_img])
+        labels, probs = predict(model, [image, adv_img])
         plot_images(image, adv_img, labels, probs)
     except Exception as e:
         print("An error occurred: %s" % repr(e))
