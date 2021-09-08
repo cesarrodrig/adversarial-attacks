@@ -52,7 +52,7 @@ pandocfilters==1.4.2
 parso==0.4.0
 pexpect==4.7.0
 pickleshare==0.7.5
-Pillow==6.0.0
+Pillow==8.3.2
 Pillow-PIL==0.1.dev0
 prometheus-client==0.7.0
 prompt-toolkit==2.0.9
